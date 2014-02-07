@@ -7,7 +7,11 @@ from django.template import RequestContext
 import foursquare 
 from models import fs 
 from django import forms
-
+import sys
+import logging
+loghandler = logging.StreamHandler(stream=sys.stdout)
+foursquare.log.addHandler(loghandler)
+foursquare.log.setLevel(logging.DEBUG)
 
 
 def newClient():
