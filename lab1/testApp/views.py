@@ -104,7 +104,8 @@ def profile_full(request, user_id):
 def handle_oauth(request):
     code = request.GET.get('code', None)
     client = newClient()
-    access_token = client.testApp.get_token(code)
+    access_token = client.oauth.get_token(code)
+    print "User access token was %s" % access_token
     client.set_access_token(access_token)
     user = client.users()['user']
     userId = request.user.id
