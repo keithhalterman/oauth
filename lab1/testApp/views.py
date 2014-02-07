@@ -19,6 +19,9 @@ def newClient():
                                client_secret='5RZ0IP0NQNWWUW4EPPICDG43IZHGANA5ASVADNJCDV5W4M0I',
                                redirect_uri='http://ec2-54-80-139-1.compute-1.amazonaws.com/test')
 
+def userClient(userId):
+    access = fs.objects.filter(user_id=userId)[0].access_token
+    return foursquare.Foursquare(access_token=access)
 
 def index(request):
 	user_list = User.objects.all()
