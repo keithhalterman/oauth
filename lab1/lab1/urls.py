@@ -13,7 +13,7 @@ urlpatterns = patterns('',
     url(r'^logout/$', 'testApp.views.logout_view'),
     url(r'^register/$', 'testApp.views.register'),
     url(r'^profile/(?P<user_id>\d+)$', 'testApp.views.profile'),
-    url(r'^oauth/redirect/$', 'testApp.views.handle_oauth'),
+    url(r'^test$', 'testApp.views.handle_oauth'),
     url(r'^oauth/start/$', 'testApp.views.link_oauth'),
     
     # url(r'^lab1/', include('lab1.foo.urls')),
