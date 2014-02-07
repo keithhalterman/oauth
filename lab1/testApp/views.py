@@ -17,7 +17,7 @@ foursquare.log.setLevel(logging.DEBUG)
 def newClient():
     return foursquare.Foursquare(client_id='V3KDK14ZMYZRIIQVIUDPILBYPGD00I5MDYBKSK04P1VMI5F2',
                                client_secret='5RZ0IP0NQNWWUW4EPPICDG43IZHGANA5ASVADNJCDV5W4M0I',
-                               redirect_uri='http://ec2-54-80-139-1.compute-1.amazonaws.com/test')
+                               redirect_uri='http://ec2-54-184-69-142.us-west-2.compute.amazonaws.com/test')
 
 def userClient(userId):
     access = fs.objects.filter(user_id=userId)[0].access_token
